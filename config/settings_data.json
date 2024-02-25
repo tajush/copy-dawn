@@ -133,10 +133,10 @@
       "announcement-bar2": {
         "type": "announcement-bar2",
         "settings": {
-          "show_announcement": true,
+          "show_announcement-bar2": true,
           "home_page_only": true,
           "text": "Announce something here",
-          "link": ""
+          "link": "#"
         }
       }
     },

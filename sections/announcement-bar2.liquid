@@ -1,49 +1,46 @@
-{%- if section.settings.show_announcement -%}
-  {%- if section.settings.home_page_only == false or template.name == 'index' -%}
-
-    {%- if section.settings.link == blank -%}
+{% if section.settings['show_announcement-bar2'] %}
+  {% if section.settings.home_page_only == false or template.name == 'index' %}
+    {% if section.settings.link == blank %}
       <div>
-    {%- else -%}
-      <a href="{{ section.settings.link }}" >
-    {%- endif -%}
-
-      <p>{{ section.settings.text | escape }}</p>
-
-    {%- if section.settings.link == blank -%}
+    {% else %}
+      <a href="{{ section.settings.link }}">
+    {% endif %}
+    <p>{{ section.settings.text | escape }}</p>
+    {% if section.settings.link == blank %}
       </div>
-    {%- else -%}
+    {% else %}
       </a>
-    {%- endif -%}
-
-  {%- endif -%}
-{%- endif -%}
+    {% endif %}
+  {% endif %}
+{% endif %}
 
 {% schema %}
 {
-  "name": "Announcement bar2",
-  "settings": [
+ "name":"announcement-bar2",
+  "settings":[
     {
-      "type": "checkbox",
-      "id": "show_announcement",
-      "label": "Show announcement",
-      "default": false
+      "type":"checkbox",
+      "id":"show_announcement-bar2",
+      "label":"announcement-bar2",
+      "default":false
+
     },
     {
-      "type": "checkbox",
-      "id": "home_page_only",
-      "label": "Home page only",
-      "default": true
+      "type":"checkbox",
+      "id":"home_page_only",
+      "label":"Home page only",
+      "default":true
     },
     {
-      "type": "text",
-      "id": "text",
-      "label": "Announcement text",
-      "default": "Announce something here"
+      "type":"text",
+      "id":"text",
+      "label":"Announcement-text",
+      "default":"Announce something"
     },
     {
-      "type": "url",
-      "id": "link",
-      "label": "Announcement link"
+      "type":"url",
+      "id":"link",
+      "label":"Announcement link"
     }
   ]
 }
