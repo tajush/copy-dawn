@@ -282,6 +282,7 @@
     </script>
   
   {% render 'shogun-head' %}
+  {{'theme.css' | asset_url| stylesheet_tag}}
 </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -293,6 +294,7 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
     {%  section  'announcement-bar' %}
+    {%  section  'header' %}
     
 
     {% comment %} {% sections 'header-group' %} {% endcomment %}
