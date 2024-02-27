@@ -2,9 +2,15 @@
   <div class="announcement-bar">
     <div class="announcement-bar-left">
       {% if section.settings.image != blank  %} 
-        <img width="40" height="40" loading="lazy" src="{{section.settings.image |  image_url }}" alt="">
+        <img width="40" height="40" loading="lazy" src="{{section.settings.image |  image_url }}" >
         {% else %}
-        <img width="40" height="40" loading="lazy" src="{{a.png |  asset_url }}" alt="">
+        <img width="40" height="40" loading="lazy" src="{{a.png |  asset_url }}" >
+       
+       {% endif %}
+       {% if section.settings.image2 != blank  %} 
+        <img width="40" height="40" loading="lazy" src="{{section.settings.image2 |  image_url }}">
+        {% else %}
+        <img width="40" height="40" loading="lazy" src="{{b.png |  asset_url }}" >
        
        {% endif %}
 
@@ -14,9 +20,16 @@
     </div>
 
   </div>
-</section> {% endif %}
+</section> 
+{% endif %}
 
+<style>
+  .announcement-bar{
+    background: {{section.settings.background }} ;
+    color: {{section.settings.textcolor}}
+  }
 
+</style>
 {% schema %}
 {
   "name": "Announcement Bar",
@@ -35,6 +48,28 @@
       "id": "image",
       "label": "Pick-image",
       "info": "png recommended format"
+    },
+    {
+     
+      "type": "image_picker",
+    
+      "id": "image2",
+      "label": "Pick-image",
+      "info": "png recommended format"
+    },
+    {
+     
+      "type": "color",
+      "default": "#F4F4F4",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+     
+      "type": "color",
+      "default": "#000000",
+      "id": "textcolor",
+      "label": "Text"
     }
   ],
     "presets": [ ]
