@@ -1,1 +1,15 @@
-<h1>this is header</h1>
+<div class="header-nav">
+    <div>
+        <a href="/"><img width="80" height="50" loading="lazy" src="{{'nike.png' |  asset_url}}" alt="nike"></a>
+
+    </div>
+    <div>
+        <ul class="middle-nav-bar">
+            {% for link in linklists['main-menu'].links %}
+                <li>{{link.title}}</li>
+                
+            {% endfor %}
+        </ul>
+    </div>
+    <div></div>
+</div>
