@@ -1,3 +1,60 @@
+<section class="all-products">
+    <h1>{{collections.summer-collections.title}}</h1>
+    <div class="product-container">
+        <div class="all-products-wrapper">
+            {% for product in collections['summer-collections'].products %}
+                <div class="product-card">
+                    <img width="300" height="300" src="{{ product.feature_image | image_url }}" alt="">
+                </div>
+                <h3>{{product.title |  link_to: product.url}}</h3>
+                
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+
+<style>
+  .all-products {
+    background: {{ section.settings.background }}
+    ;
+    color: {{ section.settings.text_color }}
+    ;
+    padding: 10px;
+
+  }
+
+  .all-products-wrapper {
+      display: flex;
+      transition: transform 0.3s ease; /* Add smooth transition effect */
+
+  }
+  .product-container {
+    position: relative;
+    overflow-x: scroll;
+  }
+
+  .product-card {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+
+    .product-card h3 a {
+      color: black;
+      text-decoration: none
+    }
+
+    .product-card a:hover {
+      text-decoration: underline;
+    }
+</style>
+
+
 {% schema %}
 {
     "name": "all-products",
