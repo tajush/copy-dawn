@@ -4,7 +4,7 @@
         <div class="all-products-wrapper">
             {% for product in collections['summer-collections'].products %}
                 <div class="product-card">
-                    <img width="300" height="300" src="{{ product.feature_image | image_url }}" alt="">
+                    <img width="300" height="300" src="{{ product.featured_image | image_url }}" alt="">
                 </div>
                 <h3>{{product.title |  link_to: product.url}}</h3>
                 

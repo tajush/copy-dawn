@@ -4,7 +4,7 @@
         <div class="all-collection-wrapper">
             {% for collection in collections %}
                 <div class="collection-card">
-                    <img width="300" height="300" loading="lazy" src="{{collections.featured_image | image_url   }}" alt="">
+                    <img width="300" height="300" loading="lazy" src="{{collection.featured_image | image_url   }}" alt="">
                     <h3>{{collection.title |  link_to: collection.url}}</h3>
                 </div>
                
