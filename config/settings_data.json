@@ -170,7 +170,7 @@
         ],
         "settings": {
           "show-announcement-bar": true,
-          "background": "#F4F4F4",
+          "background": "#f4f4f4",
           "textcolor": "#000000"
         }
       },
@@ -181,7 +181,45 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "links_mTzAEb": {
+            "type": "links",
+            "settings": {
+              "text": "Terms of Sale",
+              "url": "#"
+            }
+          },
+          "links_FxmmDa": {
+            "type": "links",
+            "settings": {
+              "text": "Privacy Policy",
+              "url": "#"
+            }
+          },
+          "links_giDVRA": {
+            "type": "links",
+            "settings": {
+              "text": "About Us",
+              "url": "#"
+            }
+          },
+          "links_DrVYPA": {
+            "type": "links",
+            "settings": {
+              "text": "Contact Us",
+              "url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "links_mTzAEb",
+          "links_FxmmDa",
+          "links_giDVRA",
+          "links_DrVYPA"
+        ],
         "settings": {
+          "text-color": "#fff",
+          "background-color": "#000"
         }
       }
     },
